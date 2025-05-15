@@ -154,4 +154,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ISAAC SHABAN 
 📧 Email: [isaacshaban54@gmail.com](mailto:isaacshaban54@gmail.com)  
-🌐 Portfolio: https://github.com/r4ms3ey/portfolio.git
+🌐 Portfolio: [https://r4ms3ey.github.io/portfolio](https://r4ms3ey.github.io/portfolio)
