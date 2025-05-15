@@ -82,7 +82,7 @@ Tools
 Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/portfolio-website.git
+git clone https://github.com/r4ms3ey/portfolio.git
 ```
 
 Navigate into the project directory:
@@ -154,4 +154,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ISAAC SHABAN 
 📧 Email: [isaacshaban54@gmail.com](mailto:isaacshaban54@gmail.com)  
-🌐 Portfolio: [https://isaacshaban.dev](https://isaacshaban.dev)
+🌐 Portfolio: https://github.com/r4ms3ey/portfolio.git
