@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio projects of ISAAC SHABAN, web developer">
+    <meta name="keywords" content="portfolio, web projects, design work">
+    <meta name="author" content="ISAAC SHABAN">
+    <title>My Portfolio | ISAAC SHABAN</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div id="logo">
+                <img src="images/profile.jpg" alt="ISAAC SHABAN Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="survey.html">Survey</a></li>
+                    <li><button id="theme-toggle">☀️/🌙</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="portfolio-header">
+            <h1>My Projects</h1>
+            <div class="filter-options">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+            </div>
+        </section>
+
+        <section class="portfolio-grid" id="web-projects">
+            <!-- Project 1 -->
+            <article class="portfolio-item web" data-category="web">
+                <div class="project-image">
+                    <img src="images/project1.webp" alt="E-commerce Website">
+                </div>
+                <div class="project-info">
+                    <h3>E-commerce Website</h3>
+                    <p>Full-featured online store with shopping cart and payment integration</p>
+                    <button class="toggle-details" data-target="project1-details">Show Details</button>
+                    <div class="project-details" id="project1-details">
+                        <p><strong>Technologies:</strong> React, Node.js, MongoDB</p>
+                        <p><strong>Features:</strong> Product catalog, user accounts, payment processing</p>
+                        <a href="#" class="live-demo">View Live Demo</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 2 -->
+            <article class="portfolio-item design" data-category="design">
+                <div class="project-image">
+                    <img src="images/projectj2.webp" alt="UI/UX Design">
+                </div>
+                <div class="project-info">
+                    <h3>Mobile App UI Design</h3>
+                    <p>Complete UI/UX design for a fitness tracking application</p>
+                    <button class="toggle-details" data-target="project2-details">Show Details</button>
+                    <div class="project-details" id="project2-details">
+                        <p><strong>Tools:</strong> Figma, Adobe XD</p>
+                        <p><strong>Features:</strong> User flows, wireframes, prototypes</p>
+                        <a href="#" class="live-demo">View Case Study</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 3 -->
+            <article class="portfolio-item mobile" data-category="mobile">
+                <div class="project-image">
+                    <img src="images/project3.webp" alt="Weather App">
+                </div>
+                <div class="project-info">
+                    <h3>Weather Application</h3>
+                    <p>Cross-platform mobile app with real-time weather data</p>
+                    <button class="toggle-details" data-target="project3-details">Show Details</button>
+                    <div class="project-details" id="project3-details">
+                        <p><strong>Technologies:</strong> React Native, OpenWeather API</p>
+                        <p><strong>Features:</strong> Location-based forecasts, severe weather alerts</p>
+                        <a href="#" class="live-demo">View on App Store</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 ISAAC SHABAN. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+                <a href="https://github.com" target="_blank" aria-label="GitHub">GitHub</a>
+                <a href="https://twitter.com" target="_blank" aria-label="Twitter">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/portfolio.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

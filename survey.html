@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Client survey for ISAAC SHABAN's services">
+    <meta name="keywords" content="survey, feedback, client">
+    <meta name="author" content="ISAAC SHABAN">
+    <title>Client Survey | ISAAC SHABAN</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div id="logo">
+                <img src="images/profile.jpg" alt="ISAAC SHABAN Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="survey.html">Survey</a></li>
+                    <li><button id="theme-toggle">☀️/🌙</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="survey-container">
+            <h1>Client Survey</h1>
+            <p>Help me improve my services by completing this short survey</p>
+
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+                <span class="progress-text" id="progressText">0% Complete</span>
+            </div>
+
+            <form id="clientSurvey" novalidate>
+                <!-- Section 1: Basic Information -->
+                <fieldset class="survey-section" id="section1">
+                    <legend>Basic Information</legend>
+
+                    <div class="form-group">
+                        <label for="name">Full Name*</label>
+                        <input type="text" id="name" name="name" required>
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address*</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="age">Age Group</label>
+                        <select id="age" name="age">
+                            <option value="">Select age group</option>
+                            <option value="18-25">18-25</option>
+                            <option value="26-35">26-35</option>
+                            <option value="36-45">36-45</option>
+                            <option value="46+">46+</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <!-- Section 2: Project Type -->
+                <fieldset class="survey-section" id="section2">
+                    <legend>Project Information</legend>
+
+                    <div class="form-group">
+                        <label>What type of project are you considering?*</label>
+                        <div class="radio-group">
+                            <label>
+                                <input type="radio" name="projectType" value="website" required> Website Development
+                            </label>
+                            <label>
+                                <input type="radio" name="projectType" value="webapp"> Web Application
+                            </label>
+                            <label>
+                                <input type="radio" name="projectType" value="mobile"> Mobile App
+                            </label>
+                            <label>
+                                <input type="radio" name="projectType" value="design"> UI/UX Design
+                            </label>
+                            <label>
+                                <input type="radio" name="projectType" value="other"> Other
+                            </label>
+                        </div>
+                        <span class="error-message" id="projectTypeError"></span>
+                    </div>
+
+                    <div class="form-group conditional" id="otherProjectType" style="display: none;">
+                        <label for="otherType">Please specify:</label>
+                        <input type="text" id="otherType" name="otherType">
+                    </div>
+
+                    <div class="form-group">
+                        <label>What features are you interested in? (Select all that apply)</label>
+                        <div class="checkbox-group">
+                            <label>
+                                <input type="checkbox" name="features" value="ecommerce"> E-commerce
+                            </label>
+                            <label>
+                                <input type="checkbox" name="features" value="cms"> Content Management
+                            </label>
+                            <label>
+                                <input type="checkbox" name="features" value="responsive"> Responsive Design
+                            </label>
+                            <label>
+                                <input type="checkbox" name="features" value="seo"> SEO Optimization
+                            </label>
+                            <label>
+                                <input type="checkbox" name="features" value="analytics"> Analytics Integration
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Section 3: Timeline & Budget -->
+                <fieldset class="survey-section" id="section3">
+                    <legend>Project Details</legend>
+
+                    <div class="form-group">
+                        <label for="timeline">What is your project timeline?*</label>
+                        <select id="timeline" name="timeline" required>
+                            <option value="">Select timeline</option>
+                            <option value="1month">1 month or less</option>
+                            <option value="3months">1-3 months</option>
+                            <option value="6months">3-6 months</option>
+                            <option value="6months+">6+ months</option>
+                        </select>
+                        <span class="error-message" id="timelineError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="budget">What is your estimated budget?*</label>
+                        <select id="budget" name="budget" required>
+                            <option value="">Select budget range</option>
+                            <option value="under1k">Under $1,000</option>
+                            <option value="1k-5k">$1,000 - $5,000</option>
+                            <option value="5k-10k">$5,000 - $10,000</option>
+                            <option value="10k+">$10,000+</option>
+                        </select>
+                        <span class="error-message" id="budgetError"></span>
+                    </div>
+
+                    <div class="form-group conditional" id="lowBudgetNote" style="display: none;">
+                        <p class="note">Note: For projects under $1,000, I typically recommend starting with a minimum viable product (MVP) or basic website.</p>
+                    </div>
+                </fieldset>
+
+                <!-- Section 4: Additional Information -->
+                <fieldset class="survey-section" id="section4">
+                    <legend>Additional Information</legend>
+
+                    <div class="form-group">
+                        <label for="reference">How did you hear about me?</label>
+                        <select id="reference" name="reference">
+                            <option value="">Select option</option>
+                            <option value="search">Search Engine</option>
+                            <option value="social">Social Media</option>
+                            <option value="recommendation">Recommendation</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comments">Any additional comments or project details:</label>
+                        <textarea id="comments" name="comments" rows="5"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="agree" value="yes" required> I agree to the <a href="#">privacy policy</a>*
+                        </label>
+                        <span class="error-message" id="agreeError"></span>
+                    </div>
+                </fieldset>
+
+                <div class="form-navigation">
+                    <button type="button" class="prev-btn" disabled>Previous</button>
+                    <button type="button" class="next-btn">Next</button>
+                    <button type="submit" class="submit-btn" style="display: none;">Submit Survey</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 ISAAC SHABAN. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+                <a href="https://github.com" target="_blank" aria-label="GitHub">GitHub</a>
+                <a href="https://twitter.com" target="_blank" aria-label="Twitter">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/survey.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
