@@ -1,0 +1,43 @@
+/* Print-specific styles */
+@media print {
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+        color: #000;
+        background: #fff;
+    }
+
+    nav, footer, .no-print {
+        display: none !important;
+    }
+
+    .resume-content {
+        border: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    a {
+        color: #000 !important;
+        text-decoration: none !important;
+    }
+
+    a[href^="http"]::after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+        font-weight: normal;
+    }
+
+    .page-break {
+        page-break-after: always;
+    }
+
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    @page {
+        margin: 1cm;
+    }
+}
